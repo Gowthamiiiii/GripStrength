@@ -1,6 +1,6 @@
 import cv2
 
-img_path="135248.0.png"
+img_path="205339.0.png"
 
 img_raw = cv2.imread(img_path)
 

@@ -30,7 +30,7 @@ def show_image(img,c):
     
         cropped_contour= bg[top_left[1]:top_left[1]+height, top_left[0]:top_left[0]+width]
         image_name= "output_shape_number_" + str(c+1) + ".jpg"
-        path = 'images1/Lighting_Condition2_images/pink_65_side'
+        path = 'pink_65_side'
         name = os.path.join(path , image_name)
         cv2.imwrite(name, cropped_contour)
         readimage= cv2.imread(name)
@@ -42,11 +42,11 @@ def show_image(img,c):
     return brightness_avg
 
 images_list = []
-directory = 'images1/Lighting_Condition2_images/pink_65_side'
+directory = 'pink_65_side'
 count = 0
 referenceTime = time.time() + 14400 - 1657670000
 startTime = time.monotonic()
-with open('LED_top_view/Lighting_2_FSR_data/pink_65_side_intensity.csv', 'w') as csvfile:
+with open('pink_65_side_intensity.csv', 'w') as csvfile:
 
     for filename in os.listdir(directory):
         #print(filename)
